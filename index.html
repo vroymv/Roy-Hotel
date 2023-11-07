@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blue Water Lily Foundation</title>
+    <title>Roy Hotel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
-    <link rel="manifest" href="favicon_io/site.webmanifest" />
+        
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="favicon_io/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
@@ -26,13 +28,13 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <a class="navbar-brand brand-name" href="#"><img class="logo" src="images/bwlf logo wb.jpeg" /> Blue Water Lily Foundation</a>
+                    <a class="navbar-brand brand-name" href="#"><img class="logo" src="images/logo.png" /> Roy Hotels</a>
 
                     <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
                         aria-labelledby="staticBackdropLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="staticBackdropLabel">
-                                <a class="navbar-brand" href="#">Blue Water Lily</a>
+                                <a class="navbar-brand" href="#">Roy Hotels</a>
                             </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
@@ -43,13 +45,13 @@
                                     <a class="nav-link links" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link links" href="about.html">About</a>
+                                    <a class="nav-link links" href="about.html">Sleep</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link links" href="causes.html">Causes</a>
+                                    <a class="nav-link links" href="causes.html">Eat</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link links" href="contact.html">Contact</a>
+                                    <a class="nav-link links" href="contact.html">Work</a>
                                 </li>
                             </ul>
                         </div>
@@ -57,111 +59,138 @@
                 </nav>
             </div>
 
-            <h3>Raising Hope</h3>
-            <p class="intro-text">
-                To the homeless & <br />
-                Hopeless people
-            </p>
+            <h3>Your escape from everyday Life.</h3>
+            <div class="intro-text">
+                <p>
+                    Book your stay today <br />
+                    & <br />
+                     experience the luxury <br />
+                     of a Roy Hotel room.
+                </p>
+            </div>
+            
 
-            <button class="join-us btn btn-warning btn-lg">Join Us
-                 <!-- <input type="submit" value="Volunteer With Us" name="join-us" /> -->
-            </button>
         </section>
 
+
+    <section id="book-now"> 
+        <form class="booking-form" method="post">
+            <div class="booking-forms">
+                <input class="form-input2" type="text" placeholder="Name" id="name"  name="name"/>
+                <input class="form-input2" type="text" placeholder="Checkin" id="check-in"  name="check-in-date"/>
+                <input class="form-input2" type="text" placeholder="CheckOut" id="check-out"  name="check-out-date"/>
+                <select id="num-adults" class="form-input2">
+                    <option value="1-adult" selected>1 Adult</option>
+                    <option value="1-adult" selected>2 Adults</option>
+                    <option value="1-adult" selected>3 Adults</option>
+                    <option value="1-adult" selected>4 Adults</option>
+                </select>
+
+                <select id="num-children" class="form-input2">
+                    <option value="0-child" selected>0 Child</option>
+                    <option value="1-child" selected>1 Child</option>
+                    <option value="2-children" selected>2 Children</option>
+                </select>
+
+                <input type="submit" value="Book Now"/>
+            </div>
+
+            <p id="errorMsg">
+                                
+            </p>
+
+            <p id="bookingMsg">
+
+            </p>
+
+        </form>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width:30rem;">
+                        <img src="images/restaurant.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Restaurant</h5>
+                          <a href="#" class="btn btn-primary">Explore</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 30rem;">
+                        <img src="images/room.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Our Rooms</h5>
+                          <a href="#" class="btn btn-primary">View our rooms</a>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width:30rem;">
+                            <img src="images/spa.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Restaurant</h5>
+                              <a href="#" class="btn btn-primary">Explore</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 30rem;">
+                            <img src="images/meeting-hall.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Our Rooms</h5>
+                              <a href="#" class="btn btn-primary">View our rooms</a>
+                            </div>
+                          </div>
+                    </div>
+            </div>
+        </div>
+    </section>
 
 
     <section id="donation">
         <div class="row">
             <div class="col-7">
-                <h3>Welcome to love care charity</h3>
-                <h1>We Help Thousands of Children To Get Their Education</h1>
+                <h3>This is news to me...</h3>
 
                 <p>
-                    Far far away, behind the word mountains, far from the countries
-                    Vokalia and Consonantia, there live the blind texts. Separated
-                    they live in Bookmarksgrove right at the coast of the Semantics, a
-                    large language ocean.
+                    From spa days, fabulous  breaks to girls nights in, we have a great selection of special offers to browse.
+
                 </p>
 
                 <p>
-                    A small river named Duden flows by their place and supplies it
-                    with the necessary regelialia. It is a paradisematic country, in
-                    which roasted parts of sentences fly into your mouth.
+                    Book direct for the best rates on the packages.
                 </p>
 
-                <div class="row">
-                    <div class="col donation-cols">
-                        <div class="p-3">
-                            <i class="fa-solid fa-house fa-bounce fa-icon"></i>
-                            <p class="donation-text">Home A Steet Chile</p>
-                        </div>
-                    </div>
-                    <div class="col donation-cols">
-                        <div class="p-3">
-                            <i class="fa-solid fa-handshake fa-icon"></i>
-                            <p class="donation-text">Be a volunteer</p>
-                        </div>
-                    </div>
-                    <div class="col donation-cols">
-                        <div class="p-3">
-                            <i class="fa-sharp fa-regular fa-people-roof fa-shake fa-icon"></i>
-                            <p class="donation-text">Join our community</p>
-                        </div>
-                    </div>
-                </div>
+                <button class="join-us btn btn-secondary btn-lg">Hotel Offers
+                    <!-- <input type="submit" value="Volunteer With Us" name="join-us" /> -->
+               </button>
             </div>
             <div class="col-5"> 
-                <div class="top-donation-method">
-                        <div class="float"><i class="fa-solid fa-hand-holding-heart"></i></div>
-                   
-                        <div class="float" id="float2"><span class="donation-top-amt">$1,850,000 </span><br/>
-                            <p>FUNDS RAISED BY 1200 PEOPLE</p>
-                        </div>
-                        
-                    
-                </div>
+            
                 <div class="donation-methods">
                     <div class="donation-center">
-                        <p class="orange">DONATE NOW</p>
-                        <h2 class="donation-moto">Giving is the greatest act of grace</h2>
+                        <h2 class="donation-moto">Check Booking</h2>
 
-                        <form action="/" method="post">
+                        <form class="verificationForm" action="index.html" method="post" action>
                             <p class="">
-                                <label class="orange form-label" for="fullName">Your Name</label>
-                                <input class="form-input" id="fullName" type="text" placeholder="Your full name.." />
+                                <label class="orange form-label" for="name-check">Name</label>
+                                <input class="form-input" id="name-check" placeholder="Enter your name" type="text" />
                             </p>
 
-                            <p>
-                                <label class="orange form-label" for="email">Email Address</label>
-                                <input class="form-input" id="email" type="email" placeholder="Your email address" />
+                            <p class="">
+                                <label class="orange form-label" for="name-check">Booking ID:</label>
+                                <input class="form-input" id="bookingIdCheck" placeholder="Enter your booking ID" type="text" />
                             </p>
 
-                            <p>
-                                <label class="orange form-label" for="cause">Select Cause</label>
-                                <select class="form-input" id="cause">
-                                    <option value="food">Food</option>
-                                    <option value="medicalHealth">Medical Health</option>
-                                    <option value="education">Education</option>
-                                    <option value="environment">Environment</option>
-                                    <option value="shelter">Shelter/Home</option>
-                                    <option value="clothes">Clothes</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </p>
-
-                            <p>
-                                <label class="orange form-label" for="donation-amount">Amount to Give</label>
-                                <input class="form-input" id="donation-amount" type="number" placeholder="Amount" />
-                            </p>
-
-                            <p class="radio">
-                                <input type="radio" value="paypal" />Paypal
-                                <input type="radio" value="card" />Card
-                                <input type="radio" value="payoneer" />Payoneer
-                            </p>
+                            
 
                             <p id="donate-btn">
-                                <input class="form-input" id="donate-button" type="submit" value="Donate Now" />
+                                <input class="form-input" id="donate-button" type="submit" value="Check" />
                             </p>
                         </form>
                     </div>
@@ -170,123 +199,9 @@
         </div>
     </section>
 
-    <section id="currentStats">
-        <div>
-            <h3>THE IMPACT WE HAVE CREATED</h3>
-            <h1>Technical Statistics</h1>
-
-            <div class="row">
-                <div class="col">
-                    <div class="p-2 transparent-screen">
-                        <i class="fa-light fa-hand-holding-seedling"></i>
-                        <p class="total-amount-raised"></p>
-                        <p>FUNDS RAISED</p>
-                    </div>
-
-                </div>
-                <div class="col">
-                    <div class="p-2 transparent-screen">
-                        <i class="fa-icon a-solid fa-hand-heart fa-beat"></i>
-                        <p class="total-num-volunteers"></p>
-                        <p>VOLUNTEERS</p>
-                    </div>
-
-                </div>
-                <div class="col">
-                    <div class="p-2 transparent-screen">
-                        <i class="fa-icon fa-light fa-hand-holding-dollar"></i>
-                        <p class="total-num-donations"></p>
-                        <p>DONATIONS</p>
-                    </div>
-
-                </div>
-                <div class="col ">
-                    <div class="p-2 transparent-screen">
-                        <i class="fa-icon fa-light fa-rectangle-history-circle-user"></i>
-                        <p class="number-of-completed-projects"></p>
-                        <p>COMPLETED PROJECTS</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="ourCauses">
-        <div class="engulf">
-            <h1 style="color: #08759F; padding-bottom: 2%;">OUR CAUSES:</h1>
-            <div class="card">
-                <img src="images/anurag-giving-food.JPG" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h2 class="card-title">Give Food To The Homeless Children</h2>
-                    <p class="card-text">
-                        Join the campaign to provide food for the poor. Your support 
-                        can make a significant difference in ending hunger and restoring 
-                        hope. Together, we can create a world where no one goes to bed hungry. 
-                        Join us in making a lasting impact.
-                    </p>
-                </div>
-                <ul class="list-group list-group-flush"></ul>
-                <div class="card-body">
-                    <progress max="100" value="60"></progress>
-                    <p class="left">Raised: <span>$1,20,000</span></p>
-                    <p class="right">Goal: <span>$200,000</span></p>
-                </div>
-            </div>
     
-            <div class="card">
-                <img src="images/David and Alex.JPG" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h2 class="card-title">Join In Let's Plant Trees</h2>
-                    <p class="card-text">
-                        Trees combat climate change, purify the 
-                         air, and support biodiversity. Help 
-                         create a greener, healthier world. Let's leave a lasting legacy 
-                         of lush forests and a sustainable future. Your involvement matters
-                          - one tree at a time!
-                    </p>
-                </div>
-                <ul class="list-group list-group-flush"></ul>
-                <div class="card-body">
-                    <progress max="100" value="60"></progress>
-                    <p class="left">Raised: <span>$42,000</span></p>
-                    <p class="right">Goal: <span>$50,000</span></p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="images/cleaning.JPG" class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h2 class="card-title">Let's Keep the Communities Clean</h2>
-                    <p class="card-text">
-                        Join the campaign to clean our community and be a part of 
-                        positive change. Together, we can create a cleaner, greener,
-                         and more vibrant place to live, fostering pride and unity 
-                         among neighbors. Join us in making a difference right in our
-                          own backyard.
-                    </p>
-                </div>
-                <ul class="list-group list-group-flush"></ul>
-                <div class="card-body">
-                    <progress max="100" value="60"></progress>
-                    <p class="left">Raised: <span>$350,000</span></p>
-                    <p class="right">Goal: <span>$500,000</span></p>
-                </div>
-            </div>
-        </div>
-
-
-    </section>
-
-    
-
-    <section id="volunteers"></section>
-
-    <section id="testimonial"></section>
-
-    <section id="blogs"></section>
     <section id="footer">
-                    <span class="copy-right">&copy 2023 CAP 283  CA3</span>
+                    <span class="copy-right">&copy 2023 CAP 283 Hotel Project</span>
          
                     <a href="#"><i class="footer-icon fab fa-facebook"></i></a>
                     <a href="#"><i class="footer-icon fab fa-instagram"></i></a>
@@ -305,7 +220,14 @@
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
+        </script>   
+    <!-- jQuery Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- JS Script -->
+    <script src="script.js">
+
+    </script>
+
 </body>
 
 </html>
