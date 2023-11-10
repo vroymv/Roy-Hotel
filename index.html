@@ -17,9 +17,77 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" />
+
+
+
+<style>
+    .log-in {
+        width: 20%;
+        border-style: solid;
+        margin: 15% auto;
+        border-radius: 5%;
+        text-align: center;
+    }
+    .submit-btn {
+        width: 95%;
+        margin: 2rem auto;
+        display: block;
+    }
+    .input-btn {
+        width: 100%;
+    }
+    .input {
+        display: block;
+        width: 95%;
+        margin: auto;
+    }
+    .room-listings, .row  {
+        padding: 4% 0;
+      }
+      .card:hover {
+        box-shadow: 0 0 10px rgba(0,0,0,.5);
+        transform: scale(1.2);
+      }
+      .rooms {
+        text-decoration: none;
+      }
+      .booked-image {
+        transform: rotate(-25deg);
+        border: 30px solid white;
+    }
+    #booked .col-6 {
+        padding-left: 5%;
+    }
+    .col-6 {
+        padding: 7%;
+        font-size: 1.5rem;
+    }
+    .about-room {
+        font-size: 2rem;
+    }
+</style>
 </head>
 
+
 <body>
+    <section id="log-in">
+<div class="container log-in">
+    <img src="./images/logo.png" width="100px" height="100px"/>
+    <p>Welcome to Roy Hotel</p>
+
+
+    <form class="verificationForm2" action="rooms.html" method="post">
+        <input class="input" id="name-check2" type="text" placeholder="Enter Your Name: " name="name"/>
+        <input class="input" id="bookingIdCheck2" type="text" placeholder="Enter your booking ID" name="booking-ID"/>
+
+        <button type="button" class="submit-btn btn btn-primary">
+            <input class="input-btn btn btn-primary" type="submit" value="Log In"/>
+        </button>
+    </form>
+</div>
+
+</section>
+<section id="main">
     <section id="landingScreen">
             <div class="container-fluid">
                 <nav data-bs-theme="dark" class="navbar header navbar-expand-lg navbar-dark">
@@ -45,13 +113,13 @@
                                     <a class="nav-link links" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link links" href="about.html">Sleep</a>
+                                    <a class="nav-link links" href="rooms.html">Sleep</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link links" href="causes.html">Eat</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link links" href="contact.html">Work</a>
+                                    <a id="log-in-link" class="nav-link links" href="#log-in">Customer Login</a>
                                 </li>
                             </ul>
                         </div>
@@ -74,7 +142,7 @@
 
 
     <section id="book-now"> 
-        <form class="booking-form" method="post">
+        <form action="#rooms" class="booking-form" method="post">
             <div class="booking-forms">
                 <input class="form-input2" type="text" placeholder="Name" id="name"  name="name"/>
                 <input class="form-input2" type="text" placeholder="Checkin" id="check-in"  name="check-in-date"/>
@@ -95,15 +163,212 @@
                 <input type="submit" value="Book Now"/>
             </div>
 
-            <p id="errorMsg">
+            <p id="msg">
                                 
             </p>
 
-            <p id="bookingMsg">
-
-            </p>
-
         </form>
+    </section>
+
+    <section id="deluxe">
+        <div style="margin-top: 2%; text-align: center;">
+            <img height="500px" src="./images/roomscaled.jpg"/>
+        </div>
+        
+        <h1 style="margin-top: 2%; text-align: center;">Deluxe King</h1>
+
+        <div style="width: 85%; margin: auto;" class="row">
+            <div class="col">
+                <p style="font-size: 1.2rem;">
+                    The Plaza’s expansive Deluxe King has one King bed and provide 550 sq. ft. of living space.<br/>
+                     Bathroom is finished with inlaid “earth stone” mosaics and include a luxurious bathtub and <br/>
+                     separate shower. Among many splendid details are 24-carat gold-plated Sherle Wagner fixtures,<br/>
+                    as well as hand-crafted solid white marble vanities
+                </p>
+
+                <ul style="font-size: 1.2rem;">
+                    <li class="a">550 sq. ft. / 51 sq. m.</li>
+                    <li class="a">One king bed</li>
+                    <li class="a">Located on floors 5 - 19</li>
+                    <li class="a">Overlooks interior courtyard or 58th Street</li>
+                    <li class="a">Large wood-paneled luxury closets with built-in drawers and storage</li>
+                    <li class="a">Most feature a soaking tub and separate shower</li>
+                    <li class="a">Deluxe King Rooms accommodate a rollaway bed</li>
+                    <li class="a">White glove butler service upon request</li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <img height="300px" src="./images/rooms/deluxeKingPlan.png"/>
+                <h1 style="text-align: center;">&#8377; 1700</h1>
+            </div>
+        </div>
+
+        <form class="book-now">
+            <div style="width: fit-content; margin: auto;">
+                <input id="final-book" type="submit" value="Book Now"/>
+
+                <div id="spinner" class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+            
+        </form>
+
+        <p></p>
+    </section>
+
+    <section id="booked">
+        <div class="row">
+            <div class="col-6">
+                <img class="booked-image" height="300px" src="./images/roomScaled.jpg"/>
+            </div>
+            <div class="col-6">
+                <p style="font-size: 1.2rem;">
+                    <h2>Here are your details: </h2>
+                    <p> Name: <span id="customerName"></span><br>
+                        Check In Date: <span id="checkInDate"></span><br/>
+                        Check Out Date: <span id="checkOutDate"></span><br/>
+                        Number Of Adults: <span id="numberOfAdults"></span><br/>
+                        Number Of Children: <span id="numberOfChildren"></span><br/>
+
+                    <b class="about-room">Deluxe King</b> <br/>
+                    
+                </p>
+                <ul style="font-size: 1.2rem;">
+                    <li class="a">550 sq. ft. / 51 sq. m.</li>
+                    <li class="a">One king bed</li>
+                    <li class="a">Located on floors 5 - 19</li>
+                    <li class="a">Overlooks interior courtyard or 58th Street</li>
+                    <li class="a">Large wood-paneled luxury closets with built-in drawers and storage</li>
+                    <li class="a">Most feature a soaking tub and separate shower</li>
+                    <li class="a">Deluxe King Rooms accommodate a rollaway bed</li>
+                    <li class="a">White glove butler service upon request</li>
+                </ul>
+
+                <div id="spinner2" class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="rooms">
+        <h1>Pick A Room</h1>
+        <div class="room-listings container text-center">
+            <h1>Guest Rooms</h1>
+              <div class="row row-cols-4">
+                <div class="col">
+                  <a id="deluxe-card" class="rooms" href="#">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./images/rooms/Unknown.jpeg" height="190px" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h3>Deluxe King</h3>
+                          <p class="card-text">The Deluxe King is a larger version of the Plaza King, providing additional living space for greater comfort, as well as space for an extra roll-in bed upon request.</p>
+                        </div>
+                      </div>
+                    </a>
+                </div>
+                <div class="col">
+                  <a class="rooms" href="#">
+                    <div class="card unavailable" style="width: 18rem;">
+                        <img src="./images/rooms/Unknown2.jpeg" height="190px" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h3>Plaza King</h3>
+                          <p class="card-text">This classic room provides a spacious, comfortable layout that is resplendent with luxurious appointments and elegant furnishings.
+                            <span style="color: red;">(Unavailable)</span>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                </div>
+                <div class="col">
+                  <a class="rooms unavailable" href="#">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./images/rooms/Unknown3.jpeg"  height="190px" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h3>Terrace Room King</h3>
+                          <p class="card-text">The Terrace Room King includes a private terrace overlooking the courtyard garden, an oversized bathroom with window, and other luxurious appointments.
+                            <span style="color: red;">(Unavailable)</span>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                </div>
+                <div class="col">
+                  <a class="rooms unavailable" href="#">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./images/rooms/unknown4.jpeg" height="190px" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h3>Deluxe Two Queens</h3>
+                          <p class="card-text">The Deluxe Two Queens overlooks 58th Street.
+                            <span style="color: red;">(Unavailable)</span>
+                          </p>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+                
+              </div>
+              <h1>Suites</h1>
+              <div class="row row-cols-4">
+                  <div class="col">
+                    <a class="rooms unavailable" href="#">
+                      <div class="card" style="width: 18rem;">
+                          <img src="./images/rooms/unknown5.jpeg" height="190px" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h3>JUNIOR SUITE KING</h3>
+                            <p class="card-text">This one-bedroom suite offers a king bed and a separate portioned parlor room that closes for privacy.
+                                <span style="color: red;">(Unavailable)</span>
+                            </p>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a class="rooms unavailable" class="rooms" href="#">
+                      <div class="card" style="width: 18rem;">
+                          <img src="./images/rooms/Unknown6.jpeg" height="190px" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h3>FAMILY GRAND LUXE 2 QUEEN</h3>
+                            <p class="card-text">Family Grand Luxe Two Queens features an open-concept room that provides a comfortable sitting area, two Queen beds, and Butler’s pantry.
+                                <span style="color: red;">(Unavailable)</span>
+                            </p>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a class="rooms unavailable" href="#">
+                      <div class="card" style="width: 18rem;">
+                          <img src="./images/rooms/Unknown7.jpeg"  height="190px" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h3>EDWARDIAN ONE BEDROOM SUITE KING</h3>
+                            <p class="card-text">The quintessential one-bedroom suite experience at The Plaza. This stately and expansive suite offers a full bedroom with a king size bed, large master bath, and a spacious living room with powder room.
+                                <span style="color: red;">(Unavailable)</span>
+                            </p>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a class="rooms unavailable" href="#">
+                      <div class="card" style="width: 18rem;">
+                          <img src="./images/rooms/unknown8.jpeg" height="190px" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h3>ROYAL SUITE THREE BEDROOM</h3>
+                            <p class="card-text">Named one of the top ten suites in the world, the magnificent Royal Suite offers the ultimate in luxury and comfort in 4,500 sq. ft. / 418 sq. m. of living space.
+                                <span style="color: red;">(Unavailable)</span>
+                            </p>
+                          </div>
+                      </div>
+                      </a>
+                  </div>
+                  
+                </div>
+            </div>
     </section>
 
     <section id="services">
@@ -176,7 +441,7 @@
                     <div class="donation-center">
                         <h2 class="donation-moto">Check Booking</h2>
 
-                        <form class="verificationForm" action="index.html" method="post" action>
+                        <form class="verificationForm" action="rooms.html" method="post">
                             <p class="">
                                 <label class="orange form-label" for="name-check">Name</label>
                                 <input class="form-input" id="name-check" placeholder="Enter your name" type="text" />
@@ -211,6 +476,7 @@
 
 
     </section>
+</section>
 
 
 

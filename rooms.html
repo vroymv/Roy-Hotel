@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roy Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+
+
+    <style>
+        #landingScreen {
+            height: 500px;        
+        }
+        #body {
+            background-color: antiquewhite;
+        }
+        .about-image {
+            transform: rotate(-25deg);
+            border: 30px solid white;
+        }
+        .col-6 {
+            padding-left: 5%;
+        }
+        .col-6 {
+            padding: 7%;
+            font-size: 1.5rem;
+        }
+        .bwlf {
+            font-size: 2rem;
+        }
+        .room-listings, .row  {
+          padding: 4% 0;
+        }
+        .card:hover {
+          box-shadow: 0 0 10px rgba(0,0,0,.5);
+          transform: scale(1.2);
+        }
+        .rooms {
+          text-decoration: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <section id="landingScreen">
+            <div class="container-fluid">
+                <nav data-bs-theme="dark" class="navbar header navbar-expand-lg navbar-dark">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <a class="navbar-brand brand-name" href="#"><img class="logo" src="images/logo.png" /> Blue Water Lily Foundation</a>
+
+                    <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                        aria-labelledby="staticBackdropLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="staticBackdropLabel">
+                                <a class="navbar-brand" href="#">Blue Water Lily</a>
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav ms-auto nav-underline">
+                                <li class="nav-item">
+                                    <a class="nav-link links" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link links" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link links" href="causes.html">Causes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link links" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+    </section>
+
+<section id="body">
+    <div class="room-listings container text-center">
+      <h1>Guest Rooms</h1>
+        <div class="row row-cols-4">
+          <div class="col">
+            <a class="rooms" href="#">
+              <div class="card" style="width: 18rem;">
+                  <img src="./images/rooms/Unknown.jpeg" height="190px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h3>Deluxe King</h3>
+                    <p class="card-text">The Deluxe King is a larger version of the Plaza King, providing additional living space for greater comfort, as well as space for an extra roll-in bed upon request.</p>
+                  </div>
+                </div>
+              </a>
+          </div>
+          <div class="col">
+            <a class="rooms" href="#">
+              <div class="card" style="width: 18rem;">
+                  <img src="./images/rooms/Unknown2.jpeg" height="190px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h3>Plaza King</h3>
+                    <p class="card-text">This classic room provides a spacious, comfortable layout that is resplendent with luxurious appointments and elegant furnishings.</p>
+                  </div>
+                </div>
+              </a>
+          </div>
+          <div class="col">
+            <a class="rooms" href="#">
+              <div class="card" style="width: 18rem;">
+                  <img src="./images/rooms/Unknown3.jpeg"  height="190px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h3>Terrace Room King</h3>
+                    <p class="card-text">The Terrace Room King includes a private terrace overlooking the courtyard garden, an oversized bathroom with window, and other luxurious appointments.</p>
+                  </div>
+                </div>
+              </a>
+          </div>
+          <div class="col">
+            <a class="rooms" href="#">
+              <div class="card" style="width: 18rem;">
+                  <img src="./images/rooms/unknown4.jpeg" height="190px" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h3>Deluxe Two Queens</h3>
+                    <p class="card-text">The Deluxe Two Queens overlooks 58th Street.</p>
+                  </div>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+        <h1>Suites</h1>
+        <div class="row row-cols-4">
+            <div class="col">
+              <a class="rooms" href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/rooms/unknown5.jpeg" height="190px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3>JUNIOR SUITE KING</h3>
+                      <p class="card-text">This one-bedroom suite offers a king bed and a separate portioned parlor room that closes for privacy.</p>
+                    </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a class="rooms" class="rooms" href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/rooms/Unknown6.jpeg" height="190px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3>FAMILY GRAND LUXE 2 QUEEN</h3>
+                      <p class="card-text">Family Grand Luxe Two Queens features an open-concept room that provides a comfortable sitting area, two Queen beds, and Butler’s pantry.</p>
+                    </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a class="rooms" href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/rooms/Unknown7.jpeg"  height="190px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3>EDWARDIAN ONE BEDROOM SUITE KING</h3>
+                      <p class="card-text">The quintessential one-bedroom suite experience at The Plaza. This stately and expansive suite offers a full bedroom with a king size bed, large master bath, and a spacious living room with powder room.</p>
+                    </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a class="rooms" href="#">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/rooms/unknown8.jpeg" height="190px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3>ROYAL SUITE THREE BEDROOM</h3>
+                      <p class="card-text">Named one of the top ten suites in the world, the magnificent Royal Suite offers the ultimate in luxury and comfort in 4,500 sq. ft. / 418 sq. m. of living space.</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+          </div>
+      </div>
+</section>
+
+<section id="footer">
+                <span class="copy-right">&copy 2023 CAP 283  CA3</span>
+     
+                <a href="#"><i class="footer-icon fab fa-facebook"></i></a>
+                <a href="#"><i class="footer-icon fab fa-instagram"></i></a>
+                <a href="mailto:vanistelroymbong@yahoo.com"><i class="footer-icon fas fa-envelope"></i>
+
+                <div class="author">-by vroymv </div>
+
+
+</section>
+
+
+
+
+<!--font awesome-->
+<script src="https://kit.fontawesome.com/c2a64c6407.js" crossorigin="anonymous"></script>
+<!--Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
